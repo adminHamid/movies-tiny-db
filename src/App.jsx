@@ -1,7 +1,7 @@
 import { memo, useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
 import { PostProvider, usePosts } from "./context/PostContext";
-import Test from "./Test";
+// import Test from "./Test";
 
 function createRandomPost() {
   return {
@@ -138,7 +138,7 @@ function List() {
         ))}
       </ul>
 
-      <Test />
+      {/* <Test /> */}
     </>
   );
 }
@@ -157,7 +157,7 @@ function Archive() {
   return (
     <aside>
       <h2>Post archive ({posts.length})</h2>
-      <button onClick={() => setShowArchive((s) => !s)}>
+      <button onClick={() => setShowArchive((prev) => !prev)}>
         {showArchive ? "Hide archive posts" : "Show archive posts"}
       </button>
 
